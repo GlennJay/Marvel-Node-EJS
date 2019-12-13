@@ -1,0 +1,104 @@
+@import url("https://unpkg.com/a11y-css-reset/combo.css");
+@font-face {
+  font-family: 'avengeance_heroic_avengerbold';
+  src: url('/myapp/public/stylesheets/avengerFont/avengerbold-webfont.woff2') format('woff2'),
+       url('/myapp/public/stylesheets/avengerFont/avengerbold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'avengeance_heroic_avengerbold';
+  src: url('avengerbold-webfont.woff2') format('woff2'),
+       url('avengerbold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'avengeance_heroic_avengerBdIt';
+  src: url('avengerbolditalic-webfont.woff2') format('woff2'),
+       url('avengerbolditalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'avengeance_heroic_avengerBdIt';
+  src: url('avengerbolditalic-webfont.woff2') format('woff2'),
+       url('avengerbolditalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'avengeance_heroic_avengerIt';
+  src: url('avengeritalic-webfont.woff2') format('woff2'),
+       url('avengeritalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'avengeance_heroic_avengerIt';
+  src: url('avengeritalic-webfont.woff2') format('woff2'),
+       url('avengeritalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'avengeance_heroic_avengerRg';
+  src: url('avengernormal-webfont.woff2') format('woff2'),
+       url('avengernormal-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'avengeance_heroic_avengerRg';
+  src: url('avengernormal-webfont.woff2') format('woff2'),
+       url('avengernormal-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+body {
+  padding: 50px;
+  font: 14px 'avengeance_heroic_avengerbold';
+  background-color: red;
+}
+
+h1{
+  font: 14px 'avengeance_heroic_avengerbold', Arial, sans-serif;
+  font-weight:normal;
+  font-style:normal;
+}
