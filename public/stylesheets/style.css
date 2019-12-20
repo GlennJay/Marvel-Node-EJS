@@ -122,11 +122,36 @@ h1{
   font-style:normal;
 }
 
+.resultsrow{
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  line-height: 75px;
+}
 
+/* hero card */
+.herocolumn{
+  width: 20vw;
+}
+.herocard{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+.herocard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.herocard img{
+  width: 100%;
+  height: 40vh;
+}
 
-
-
-
+#heroname , #herobio{
+  font: 14px 'avengeance_heroic_avengerRg', Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  
+}
 
 
 

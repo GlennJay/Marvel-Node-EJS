@@ -20,7 +20,7 @@ router.get('/', function(req, res, next) {
   
   var name;
 
- axios.get('https://gateway.marvel.com:443/v1/public/characters?name=wolverine',{
+ axios.get('https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=a',{
   params: {
     ts:  timeStamp,
     apikey: marvelKey.pubKey,
@@ -29,8 +29,8 @@ router.get('/', function(req, res, next) {
 })
 .then(response => {
   console.log(response);//.data.data.results[0].name);
-  name = response.data.data.results[0].name;
-  res.render('index', { title: name });
+  results = response.data.data.results;
+  res.render('index', { results: results });
 })
 .catch(error => console.log(error));
 

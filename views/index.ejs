@@ -1,6 +1,23 @@
 <% include partials/header %>
 
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+  
+
+    <div class="resultsrow">
+        
+        <% results.forEach(function(hero) { %>
+            <div class="herocolumn">
+            <div class="herocard">
+                <%  let image = hero.thumbnail.path + "." + hero.thumbnail.extension; %>
+                <img src="<%= image %>" alt="">
+                <div class="heroinfo">
+                    <h2 id="heroname"><%= hero.name %></h2>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+        
+    </div>
+
+
 
 <% include partials/footer %>
