@@ -87,12 +87,18 @@
 }
 
 /* top nav */
+.navbar{
+  
+  
+}
 .topnav{
   background-color: #333;
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
 }
 .topnav a{
-  float: left;
+ /*  float: left; */
   display: block;
   color: red;
   text-align: center;
@@ -108,6 +114,32 @@
 }
 .topnav .icon {
   display: none;
+}
+.searchBar input{
+  padding: 14px 16px;
+  /* position: relative;
+  left: 75%; */
+}
+.searchBar input[type=submit]{
+  font: 17px 'avengeance_heroic_avengerbold';
+  color: red;
+  background-color: #333;
+  border: none;
+}
+.searchBar input[type=text]{
+  color: red;
+  font: 17px 'avengeance_heroic_avengerRg';
+  background-color: #333;
+  border: none;
+}
+.searchBar input[type=text]:focus{
+  outline: none;
+}
+.searchBar{
+  /* padding: 14px 16px; */
+  /* position: relative;
+  left: 75%; */
+  align-self: flex-end;
 }
 
 body {
@@ -137,6 +169,7 @@ h1{
 .herocard{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
+  background-color: #333;
 }
 .herocard:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -146,7 +179,7 @@ h1{
   height: 40vh;
 }
 
-#heroname , #herobio{
+#heroname{
   font: 14px 'avengeance_heroic_avengerRg', Arial, sans-serif;
   text-align: center;
   margin: 0;
@@ -156,24 +189,34 @@ h1{
 
 
 
+
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
+  .searchBar{
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
   }
+  
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive, .searchBar.responsive {position: relative;}
   .topnav.responsive a.icon {
     position: absolute;
     right: 0;
     top: 0;
   }
   .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .searchBar.responsive{
     float: none;
     display: block;
     text-align: left;
