@@ -29,7 +29,7 @@ router.get('/', function(req, res, next) {
   })
   .then(response => {
     console.log(response);//.data.data.results[0].name);
-    results = response.data.data.results;
+    let results = response.data.data.results;
     res.render('index', { results: results });
   })
   .catch(error => console.log(error));
@@ -48,11 +48,26 @@ router.post('/', function(req,res){
   })
   .then(response => {
     console.log(response);
-    results = response.data.data.results;
+    let results = response.data.data.results;
     res.render('index', { results: results });
   })
   .catch(error => console.log(error));
 
+});
+
+router.get("/:id", function(req,res){
+  axios.get('https://gateway.marvel.com:443/v1/public/characters/' + req.params.id,{
+    params: {
+      ts:  timeStamp,
+      apikey: marvelKey.pubKey,
+      hash:  marvelHash
+    }
+  })
+  .then(response =>{
+    let character = response.data.data.results;
+    res.render('index', {results: character});
+  })
+  .catch(error => console.log(error));
 });
 
 module.exports = router;
